@@ -2,7 +2,7 @@ import { chakra } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 export default function AniLogo() {
-    const icon = {
+    const icon1 = {
         hidden: {
           pathLength: 0,
           strokeWidth: 0,
@@ -10,6 +10,7 @@ export default function AniLogo() {
           fill: "rgba(255, 255, 255, 0)",
           transition: {
             duration: 1,
+            delay:0,
             fill: { duration: 1.5, ease: "linear" },
           },
         },
@@ -21,6 +22,58 @@ export default function AniLogo() {
           fill: "rgba(255, 255, 255, 1)",
           transition: {
             duration: 1,
+            delay:0,
+            fill: { duration: 1.5, ease: "linear" },
+          },
+        },
+      };
+
+      const icon2 = {
+        hidden: {
+          pathLength: 0,
+          strokeWidth: 0,
+          opacity: 0,
+          fill: "rgba(255, 255, 255, 0)",
+          transition: {
+            duration: 1,
+            delay:0.5,
+            fill: { duration: 1.5, ease: "linear" },
+          },
+        },
+        visible: {
+          pathLength: 1,
+          strokeWidth: 4,
+          stroke: "white",
+          opacity: 1,
+          fill: "rgba(255, 255, 255, 1)",
+          transition: {
+            duration: 1,
+            delay:0.5,
+            fill: { duration: 1.5, ease: "linear" },
+          },
+        },
+      };
+      const icon3 = {
+        hidden: {
+          pathLength: 0,
+          strokeWidth: 0,
+          opacity: 0,
+          fill: "rgba(255, 255, 255, 0)",
+          transition: {
+            duration: 1,
+            delay:1,
+            fill: { duration: 1.5, ease: "linear" },
+          },
+        },
+        visible: {
+          pathLength: 1,
+          strokeWidth: 4,
+          stroke: "white",
+          opacity: 1,
+          fill: "rgba(255, 255, 255, 1)",
+          transition: {
+            duration: 1,
+            delay:1,
             fill: { duration: 1.5, ease: "linear" },
           },
         },
@@ -94,19 +147,19 @@ export default function AniLogo() {
         </motion.g>
         <g id="Layer_1" data-name="Layer 1">
           <motion.path
-            variants={icon}
+            variants={icon2}
             initial="hidden"
             animate="visible"
             d="M691.29,421a27.69,27.69,0,0,0-20.46-9.24c-16,0-28.94,14.12-28.94,31.55v87.5c0,.41,0,.81,0,1.21-.07,2.1-.16,4.19-.16,6.29v7.66a42.21,42.21,0,1,1-84.42,0V534.44c0-1,0-2.16,0-3.68v-87.5c0-17.43-13-31.55-28.94-31.55h-.16c-16,0-29,14.16-28.94,31.62l.16,87.43q0,50.93,26.42,85.23t73.77,34.3q47.79,0,74-33t26.2-86.54v-87.5A32.91,32.91,0,0,0,691.29,421Z"
           />
           <motion.path
-            variants={icon}
+            variants={icon1}
             initial="hidden"
             animate="visible"
             d="M412.78,428.34l-44,111.89a4.46,4.46,0,0,1-8.3,0L316.38,428.34c-5.29-13.61-21-20.49-35-15.37s-21.16,20.31-15.87,33.93l.18.44,73.48,185.71c5.33,13.6,21,20.44,35.09,15.28A26.83,26.83,0,0,0,390,633.05l73.47-185.71c5.42-13.56-1.54-28.81-15.54-34s-29.75,1.49-35.17,15"
           />
           <motion.rect
-            variants={icon}
+            variants={icon3}
             initial="hidden"
             animate="visible"
             x="729.63"
@@ -117,7 +170,7 @@ export default function AniLogo() {
             transform="translate(1659.8 885.17) rotate(180)"
           />
           <motion.rect
-            variants={icon}
+            variants={icon3}
             initial="hidden"
             animate="visible"
             x="729.63"
@@ -128,7 +181,7 @@ export default function AniLogo() {
             transform="translate(1581.56 1061.32) rotate(180)"
           />
           <motion.rect
-            variants={icon}
+            variants={icon3}
             initial="hidden"
             animate="visible"
             x="729.63"
