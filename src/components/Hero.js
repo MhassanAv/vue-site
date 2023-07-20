@@ -1,6 +1,7 @@
 import { Center, Button, VStack,Box } from "@chakra-ui/react";
 import AniLogo from "./AniLogo";
 import { keyframes } from "@chakra-ui/react";
+import { SwiperSlide } from "swiper/react";
 
 export default function Hero() {
   const animationKeyframes = keyframes`
@@ -25,9 +26,6 @@ export default function Hero() {
       zIndex={"1"}
       align={"center"}
       justify={"center"}
-      bgSize={'300% 300%'}
-      bgGradient={`linear(45deg, hsl(270, 67%, 47%), hsl(330, 100%, 50%))`}
-      animation={animation}
     >
       <VStack
         w="full"
@@ -37,7 +35,6 @@ export default function Hero() {
         zIndex={"1"}
         align={"center"}
         justify={"center"}
-        bgGradient={`linear(to-t, black, transparent,black)`}
       >
         <Center maxH="50%" w='full'>
           <AniLogo />

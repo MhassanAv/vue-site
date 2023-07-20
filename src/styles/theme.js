@@ -8,23 +8,20 @@ const stylesTheme = {
     heading:`${font.style.fontFamily}`
   },
   colors: {
-    egypt: "#1134A6",
-    azure: "#0080FE",
-    olympic: "#008ECC",
-    prim: "#009d56",
-    prim2: "#FFD850",
-    prim3: "#F4F0F8",
-    textPrim: "#232536",
-    text: "#6D6E76",
-    footer: "#21212D",
+    prim: "#653694",
+    headings: "#FFFFFF",
+    text: "#E0E5F3",
+    footer: "#011C2A",
+    bg:"#181818"
   },
   styles: {
     global: (props) => ({
       "html, body": {
         postion: "relative",
         fontSize: "16px",
-        overflowX: "hidden",
-        bg:"black",
+        overflow: "hidden",
+        bg:"bg",
+        color:'text',
         padding: "0",
         margin: "0",
       },
