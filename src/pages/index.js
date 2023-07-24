@@ -5,7 +5,9 @@ import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
 import { chakra } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel } from "swiper";
+import { Mousewheel,Scrollbar } from "swiper";
+import 'swiper/css';
+import 'swiper/css/scrollbar';
 
 export default function Home() {
   const ChakraSwiper = chakra(Swiper);
@@ -19,14 +21,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ChakraSwiper
-        modules={[Mousewheel]}
-        pagination={{ clickable: true }}
+        modules={[Mousewheel,Scrollbar]}
+        touchReleaseOnEdges={true}
+        scrollbar
         slidesPerView={1}
-        mousewheel={true}
-        freeMode={true}
         direction="vertical"
-        maxH='500vh'
+        freeMode={true}
+        mousewheel={true}
+        allowTouchMove={true}
+        threshold={1}
         speed={800}
+        maxH='100vh'
+        px={['1.5rem','3rem','5rem']}
       >
         <SwiperSlide>
           <Hero />
