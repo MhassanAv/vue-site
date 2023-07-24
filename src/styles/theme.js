@@ -1,7 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
-import { Squada_One} from 'next/font/google'
+import { Inter } from 'next/font/google'
 
-const font = Squada_One({ subsets: ['latin'],weight:['400'] })
+const font = Inter({ subsets: ['latin'],weight:['300','400','500'] })
 
 const stylesTheme = {
   fonts:{
@@ -21,13 +21,22 @@ const stylesTheme = {
         fontSize: "16px",
         overflow: "hidden",
         bg:"bg",
+        bgImage:'main-bg.svg',
+      bgSize:'contain',
+      bgRepeat:'no-repeat',
+      bgPos:'right',
         color:'text',
         padding: "0",
         margin: "0",
       },
-      // ".cls-1":{
-      //   fill:'white'
-      // }
+      "p":{
+        color:'text',
+        fontWeight:'300'
+      },
+      "H1,H2,H3,H4,H5,H6":{
+        color:'headings',
+        fontWeight:'500',
+      }
     }),
   },
 };

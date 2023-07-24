@@ -1,9 +1,9 @@
 
 // import Footer from "@/components/Footer";
 import ScrollBtn from "@/components/ScrollBtn";
-import { Squada_One } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
-const font = Squada_One({ subsets: ['latin'],weight:['400'] })
+const font = Inter({ subsets: ['latin'],weight:['400'] })
 
 
 export default function Layout({ children }) {
