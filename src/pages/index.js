@@ -32,7 +32,7 @@ export default function Home() {
         allowTouchMove={true}
         threshold={1}
         speed={800}
-        maxH='100vh'
+        maxH='100dvh'
         willChange={true}
       >
         <SwiperSlide>

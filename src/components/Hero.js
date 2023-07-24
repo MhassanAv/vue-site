@@ -11,8 +11,8 @@ export default function Hero() {
   return (
 
     <VStack
-      h="100vh"
-      maxH="100vh"
+      h="100dvh"
+      maxH="100dvh"
       w="full"
       zIndex={"1"}
       align={"center"}

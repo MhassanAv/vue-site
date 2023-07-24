@@ -13,8 +13,8 @@ import {
 export default function About() {
   return (
     <Center
-      h="100vh"
-      maxH="100vh"
+      h="100dvh"
+      maxH="100dvh"
       w="full"
       py="2rem"
       flexDir={["column", "column","column", "row"]}
