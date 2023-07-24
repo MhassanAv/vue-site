@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel,Scrollbar } from "swiper";
 import 'swiper/css';
 import 'swiper/css/scrollbar';
+import Services from "@/components/Services";
 
 export default function Home() {
   const ChakraSwiper = chakra(Swiper);
@@ -25,20 +26,23 @@ export default function Home() {
         touchReleaseOnEdges={true}
         scrollbar
         slidesPerView={1}
-        direction="vertical"
         freeMode={true}
         mousewheel={true}
+        direction="vertical"
         allowTouchMove={true}
         threshold={1}
         speed={800}
         maxH='100vh'
-        px={['1.5rem','3rem','5rem']}
+        willChange={true}
       >
         <SwiperSlide>
           <Hero />
         </SwiperSlide>
         <SwiperSlide>
           <About />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Services />
         </SwiperSlide>
         <SwiperSlide>
           <Portfolio />
