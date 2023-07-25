@@ -1,14 +1,14 @@
 import Head from "next/head";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Portfolio from "@/components/Portfolio";
-import Contact from "@/components/Contact";
+import Hero from "@/components/Home/Hero";
+import About from "@/components/About/About";
+import Portfolio from "@/components/Portfolio/Portfolio";
+import Contact from "@/components/Contact/Contact";
 import { chakra } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel,Scrollbar } from "swiper";
 import 'swiper/css';
 import 'swiper/css/scrollbar';
-import Services from "@/components/Services";
+import Services from "@/components/Services/Services";
 
 export default function Home() {
   const ChakraSwiper = chakra(Swiper);

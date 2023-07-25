@@ -1,5 +1,6 @@
 import { Flex, Image, Button } from "@chakra-ui/react";
 import { useSwiper } from "swiper/react";
+import Btn from "./Btn";
 
 
 
@@ -22,23 +23,11 @@ export default function Nav() {
         <Button variant={'unstyled'} fontWeight={'500'} fontSize={'1.2rem'} onClick={()=>swiper.slideTo(2)}>Services</Button>
         <Button variant={'unstyled'} fontWeight={'500'} fontSize={'1.2rem'} onClick={()=>swiper.slideTo(3)} >Portfolio</Button>
       </Flex>
-      <Button
-      display={['none','none','none','block']}
-          bg='prim'
-          rounded={"full"}
-          variant={"unstyled"}
-          transition={'all 0.3s ease'}
-          h='3.5rem'
-          w={'10.75rem'}
-          fontSize={'1.2rem'}
-          fontWeight={'500'}
+      <Btn
           onClick={()=>swiper.slideTo(4)}
-          _hover={{
-            transform: 'scale(1.05)'
-          }}
-        >
+       >
           Contact Us
-        </Button>
+        </Btn>
     </Flex>
   );
 }

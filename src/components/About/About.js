@@ -9,6 +9,7 @@ import {
   Button,
   useMediaQuery
 } from "@chakra-ui/react";
+import Btn from "../Btn";
 
 export default function About() {
   return (
@@ -37,23 +38,10 @@ export default function About() {
           your company or startup with optimal cost, all while balancing cost
           with quality.
         </Text>
-        <Button
-          display={['none','none','none','block']}
-          bg='prim'
-          rounded={"full"}
-          variant={"unstyled"}
-          alignSelf={['center','center','center','start']}
-          transition={'all 0.3s ease'}
-          h='3.5rem'
-          w={['10.75rem','10.75rem','14.438rem']}
-          fontSize={['1rem','1.2rem']}
-          fontWeight={'500'}
-          _hover={{
-            transform: 'scale(1.05)'
-          }}
+        <Btn
         >
           Contact Us
-        </Button>
+        </Btn>
       </VStack>
       <Center flex='1' p='0' w={['full','35vh','40vh','full']} >
         <SimpleGrid columns={2} gap={"1rem"} >
