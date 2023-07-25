@@ -23,7 +23,7 @@ export default function AniLogo2() {
       transition: {
         duration: 1,
         delay: 0,
-        fill: { duration: 1.5, ease: "linear" },
+        fill: { duration: 1.5, ease: "linear", delay:1  },
       },
     },
   };
@@ -49,7 +49,7 @@ export default function AniLogo2() {
       transition: {
         duration: 1,
         delay: 0.5,
-        fill: { duration: 1.5, ease: "linear" },
+        fill: { duration: 1.5, ease: "linear", delay:1.5 },
       },
     },
   };
@@ -74,7 +74,7 @@ export default function AniLogo2() {
       transition: {
         duration: 1,
         delay: 1,
-        fill: { duration: 1.5, ease: "linear" },
+        fill: { duration: 1.5, ease: "linear" ,delay:2 },
       },
     },
   };

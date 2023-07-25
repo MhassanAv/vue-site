@@ -38,10 +38,12 @@ export default function About() {
           your company or startup with optimal cost, all while balancing cost
           with quality.
         </Text>
+        <Box alignSelf={['start']} display={['none','none','none','flex']} >
         <Btn
         >
           Contact Us
         </Btn>
+        </Box>
       </VStack>
       <Center flex='1' p='0' w={['full','35vh','40vh','full']} >
         <SimpleGrid columns={2} gap={"1rem"} >

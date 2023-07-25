@@ -23,7 +23,6 @@ export default function Hero() {
       <VStack
         w="full"
         h="full"
-        px="1rem"
         pos={"relative"}
         zIndex={"1"}
         gap="2rem"
