@@ -91,8 +91,8 @@ export default function AniLogo2() {
     >
       <defs>
         <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#473896" />
-          <stop offset="50%" stopColor="#a83593" />
+          {/* <stop offset="0%" stopColor="#473896" /> */}
+          <stop offset="0%" stopColor="#a83593" />
           <stop offset="100%" stopColor="#cb274a" />
         </linearGradient>
       </defs>

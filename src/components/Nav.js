@@ -12,13 +12,13 @@ export default function Nav() {
       w="full"
       align={"center"}
       justify={['center','center','center',"space-between"]}
-      zIndex={"2"}
+      zIndex={"10"}
       px={["1.5rem", "3rem", "5rem"]}
       top='0'
       py='3rem'
     >
-      <Box flex='1'>
-      <Image src="logo.svg" alt="logo" w="7rem"  />
+      <Box flex={['none','none','1']}>
+      <Image src="logo.svg" alt="logo" w={['5rem','6rem',"7rem"]} m='0'  />
       </Box>
       <Flex align={"center"} justifyContent={"center"} gap='3rem' display={['none','none','none','flex']} flex='1'>
         <Button variant={'unstyled'} fontWeight={'500'} fontSize={'1.2rem'} onClick={()=>swiper.slideTo(1)}>About Us</Button>

@@ -24,19 +24,16 @@ export default function About() {
       px={['1.5rem','3rem','5rem']}
     >
       <VStack flex='1' gap="2rem" justifyContent={"center"} alignItems={'center'} w='full'>
-        <Heading fontSize={["3vh","2rem", "2.5rem"]} textAlign={['center','left','left']}>
+        <Heading fontSize={["3.5vh","2rem", "2.5rem"]} >
           We are your one-stop shop for a complete online presence for your
           company or startup.
         </Heading>
-        <Text fontSize={["2vh","1rem"]} textAlign={'justify'}>
+        <Text fontSize={['1rem','1.2rem']} >
           We provide a wide array of services including{" "}
           <strong>
             full-stack web development, graphic design, branding, SEO,
             copywriting, mobile development, and digital marketing.
           </strong>
-          With VUE, you can find the perfect service package to fit the needs of
-          your company or startup with optimal cost, all while balancing cost
-          with quality.
         </Text>
         <Box alignSelf={['start']} display={['none','none','none','flex']} >
         <Btn
