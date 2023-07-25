@@ -1,4 +1,4 @@
-import { Flex, Image, Button } from "@chakra-ui/react";
+import { Flex, Image, Button,Box } from "@chakra-ui/react";
 import { useSwiper } from "swiper/react";
 import Btn from "./Btn";
 
@@ -17,17 +17,21 @@ export default function Nav() {
       top='0'
       py='3rem'
     >
-      <Image src="logo.svg" alt="logo" w="7rem" />
-      <Flex align={"center"} justifyContent={"center"} gap='3rem' display={['none','none','none','flex']}>
+      <Box flex='1'>
+      <Image src="logo.svg" alt="logo" w="7rem"  />
+      </Box>
+      <Flex align={"center"} justifyContent={"center"} gap='3rem' display={['none','none','none','flex']} flex='1'>
         <Button variant={'unstyled'} fontWeight={'500'} fontSize={'1.2rem'} onClick={()=>swiper.slideTo(1)}>About Us</Button>
         <Button variant={'unstyled'} fontWeight={'500'} fontSize={'1.2rem'} onClick={()=>swiper.slideTo(2)}>Services</Button>
         <Button variant={'unstyled'} fontWeight={'500'} fontSize={'1.2rem'} onClick={()=>swiper.slideTo(3)} >Portfolio</Button>
       </Flex>
+      <Box flex='1' alignItems={'center'} justifyContent={'end'} display={['none','none','none','flex']}>
       <Btn
           onClick={()=>swiper.slideTo(4)}
        >
           Contact Us
         </Btn>
+        </Box>
     </Flex>
   );
 }
