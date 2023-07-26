@@ -37,9 +37,9 @@ export default function Hero() {
           content:"''",
           pos:'absolute',
           top:'-65%',
-          w:'200vw', 
+          w:'300vw', 
           h:'100%',
-          animation:`${gradient} 10s ease-in-out infinite`,
+          animation:`${gradient} 12s ease-in-out infinite`,
           transform:'rotate(-38deg)',
           bg:`linear-gradient(300deg, 
             red,#473896,cyan, #a83593,#cb274a)`,
@@ -56,8 +56,6 @@ export default function Hero() {
         zIndex={"1"}
         gap="2rem"
         justify={"center"}
-        
-       
       >
         <Center w="full" p={["0", "0", "3rem"]}>
           <AniLogo2 />

@@ -5,8 +5,8 @@ export default function Btn({children,onClick}) {
     <Button
           rounded={"full"}
           variant={"unstyled"}
-          transition={'all 0.3s ease'}
-          border={'3px solid transparent'}
+          transition={'background 0.3s ease'}
+          border={'4px solid transparent'}
           h='3.5rem'
           w={['10.438rem','10.438rem','14.438rem']}
           fontSize={['1rem','1.2rem']}
@@ -18,7 +18,6 @@ export default function Btn({children,onClick}) {
           _hover={{
             border:'none', 
             bgGradient:'linear-gradient(to-l, #743ad5, #d53a9d)',
-            transform:'scale(1.05)',
           }}
         >
           {children}
