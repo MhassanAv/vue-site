@@ -1,4 +1,4 @@
-import { Center, Heading, Image, chakra, Flex } from "@chakra-ui/react";
+import { Center, Heading, chakra,Box,HStack } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 
@@ -21,12 +21,15 @@ export default function Card({ title, icon, corner }) {
     speed: 200,
     max: 5,
     glare: true,
+    gyroscope: true,
   };
 
   const leftRadiusTop = ['1rem','1rem','1rem',corner === "lt" ? "3rem" : "0"]
   const leftRadiusBot = ['1rem','1rem','1rem',corner === "lb" ? "3rem" : "0"]
   const RightRadiusTop = ['1rem','1rem','1rem',corner === "rt" ? "3rem" : "0"]
   const RightRadiusBot = ['1rem','1rem','1rem',corner === "rb" ? "3rem" : "0"]
+
+  console.log(icon)
 
   return (
     <ChakraTilt
@@ -38,7 +41,7 @@ export default function Card({ title, icon, corner }) {
     >
       <Center
         w="full"
-        h={["12vh", "12vh", "20vh", "30vh"]}
+        h={["10vh", "12vh", "20vh", "30vh"]}
         pos="relative"
         zIndex={"2"}
         overflow={"hidden"}
@@ -47,23 +50,10 @@ export default function Card({ title, icon, corner }) {
         roundedBottomRight={RightRadiusBot}
         roundedTopRight={RightRadiusTop}
         roundedTopLeft={leftRadiusTop}
-        _after={{
-          content: `url(${icon})`,
-          pos: "absolute",
-          transform: "scale(7)",
-          overflow: "hidden",
-          top: "7.5rem",
-          right: "2rem",
-          opacity: "0.2",
-          blendMode: "screen",
-        }}
         sx={{
           border: "1px solid rgba(255,255,255, 0.6)",
           backgroundColor: "rgba(255,255,255, 0.1)",
-          backdropFilter: "blur(2px)",
-
-          boxShadow:
-            "0px calc(15.938rem / 6) calc(15.938rem / 3) rgba(black, 0.1)",
+          backdropFilter: "blur(5px)",
           transition: "transform 500ms ease-out",
           overflow: "hidden",
 
@@ -73,7 +63,7 @@ export default function Card({ title, icon, corner }) {
             width: "60%",
             height: "100%",
             top: "0%",
-            left: "-125%",
+            left: "-150%",
             roundedBottomLeft: { leftRadiusBot },
             roundedBottomRight: { RightRadiusBot },
             roundedTopRight: { RightRadiusTop },
@@ -95,6 +85,19 @@ export default function Card({ title, icon, corner }) {
           },
         }}
       >
+        <Box
+        sx={{
+          pos: "absolute",
+          transform: "scale(5)",
+          overflow: "hidden",
+          top: "4rem",
+          right: "4rem",
+          opacity: "0.15",
+          blendMode: "screen",
+        }}
+        >
+          {icon}
+        </Box>
         <Center
           gap="1rem"
           alignItems={"center"}
@@ -102,7 +105,9 @@ export default function Card({ title, icon, corner }) {
           flexDir={["row", "row", "column"]}
           w="full"
         >
-          <Image alt="icon" src={icon} />
+          <HStack>
+          {icon}
+          </HStack>
           <Heading fontSize={["1rem", "1.2rem", "1.5rem"]} textAlign={"center"}>
             {title}
           </Heading>

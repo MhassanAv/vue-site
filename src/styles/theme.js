@@ -9,6 +9,7 @@ const stylesTheme = {
   },
   colors: {
     prim: "#653694",
+    sec:"#A53594",
     headings: "#FFFFFF",
     text: "#E0E5F3",
     footer: "#011C2A",
