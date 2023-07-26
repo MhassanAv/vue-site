@@ -29,7 +29,6 @@ export default function Card({ title, icon, corner }) {
   const RightRadiusTop = ['1rem','1rem','1rem',corner === "rt" ? "3rem" : "0"]
   const RightRadiusBot = ['1rem','1rem','1rem',corner === "rb" ? "3rem" : "0"]
 
-  console.log(icon)
 
   return (
     <ChakraTilt
@@ -41,7 +40,7 @@ export default function Card({ title, icon, corner }) {
     >
       <Center
         w="full"
-        h={["10vh", "12vh", "20vh", "30vh"]}
+        h={ ['50vh','50vh','50vh',"30vh"]}
         pos="relative"
         zIndex={"2"}
         overflow={"hidden"}
@@ -55,7 +54,6 @@ export default function Card({ title, icon, corner }) {
           backgroundColor: "rgba(255,255,255, 0.1)",
           backdropFilter: "blur(5px)",
           transition: "transform 500ms ease-out",
-          overflow: "hidden",
 
           "&::before": {
             content: "''",
@@ -90,10 +88,10 @@ export default function Card({ title, icon, corner }) {
           pos: "absolute",
           transform: "scale(5)",
           overflow: "hidden",
-          top: "4rem",
-          right: "4rem",
+          top: ["50%",'6rem'],
+          right: [null,null,null,'3rem'],
           opacity: "0.15",
-          blendMode: "screen",
+          mixBlendMode: "color-dodge",
         }}
         >
           {icon}
@@ -102,7 +100,7 @@ export default function Card({ title, icon, corner }) {
           gap="1rem"
           alignItems={"center"}
           justifyContent={["start", "start", "center"]}
-          flexDir={["row", "row", "column"]}
+          flexDir={"column"}
           w="full"
         >
           <HStack>
