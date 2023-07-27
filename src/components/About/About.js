@@ -33,6 +33,7 @@ export default function About() {
           textShadow={
             "3px 3px #A53594"
           }
+          sx={{textWrap:'balance'}}
         >
           We are your one-stop shop for a complete online presence for your
           company or startup.
