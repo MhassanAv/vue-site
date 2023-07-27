@@ -22,6 +22,9 @@ export default function Card({ title, icon, corner }) {
     max: 5,
     glare: true,
     gyroscope: true,
+    gyroscopeMinAngleX:     -45,    
+    gyroscopeMinAngleY:     -45,    
+    gyroscopeMaxAngleY:     45, 
   };
 
   const leftRadiusTop = ['1rem','1rem','1rem',corner === "lt" ? "3rem" : "0"]
