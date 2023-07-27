@@ -17,12 +17,13 @@ export default function Card({ title, icon, corner }) {
   const ChakraTilt = chakra(Tilt);
 
   const options = {
-    scale: 1.05,
+    scale: 1.03,
     speed: 200,
-    max: 5,
+    max: 10,
     glare: true,
     gyroscope: true,
-    gyroscopeMinAngleX:     -45,    
+    gyroscopeMinAngleX:     -45,    // This is the bottom limit of the device angle on X axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the left border of the element;
+    gyroscopeMaxAngleX:     45,     
     gyroscopeMinAngleY:     -45,    
     gyroscopeMaxAngleY:     45, 
   };
@@ -40,52 +41,49 @@ export default function Card({ title, icon, corner }) {
       roundedBottomRight={RightRadiusBot}
       roundedTopRight={RightRadiusTop}
       roundedTopLeft={leftRadiusTop}
-    >
-      <Center
-        w="full"
-        h={ ['50vh','50vh','50vh',"30vh"]}
+      display={'flex'}
+      alignItems={'center'}
+      justifyContent={'center'}
+      h={ ['50vh','50vh','50vh',"30vh"]}
         pos="relative"
         zIndex={"2"}
         overflow={"hidden"}
         px="1rem"
-        roundedBottomLeft={leftRadiusBot}
-        roundedBottomRight={RightRadiusBot}
-        roundedTopRight={RightRadiusTop}
-        roundedTopLeft={leftRadiusTop}
         sx={{
           border: "1px solid rgba(255,255,255, 0.6)",
           backgroundColor: "rgba(255,255,255, 0.1)",
           backdropFilter: "blur(5px)",
           transition: "transform 500ms ease-out",
 
-          "&::before": {
-            content: "''",
-            background: "rgba(255,255,255, 0.4)",
-            width: "60%",
-            height: "100%",
-            top: "0%",
-            left: "-150%",
-            roundedBottomLeft: { leftRadiusBot },
-            roundedBottomRight: { RightRadiusBot },
-            roundedTopRight: { RightRadiusTop },
-            roundedTopLeft: { leftRadiusTop },
+          // "&::before": {
+          //   content: "''",
+          //   background: "rgba(255,255,255, 0.4)",
+          //   width: "60%",
+          //   height: "100%",
+          //   top: "0%",
+          //   left: "-150%",
+          //   roundedBottomLeft: { leftRadiusBot },
+          //   roundedBottomRight: { RightRadiusBot },
+          //   roundedTopRight: { RightRadiusTop },
+          //   roundedTopLeft: { leftRadiusTop },
 
-            transform: "skew(45deg)",
+          //   transform: "skew(45deg)",
 
-            position: "absolute",
+          //   position: "absolute",
 
-            transition: "left 500ms ease-out",
-          },
+          //   transition: "left 500ms ease-out",
+          // },
 
-          "&:hover": {
-            transform: "translateY(0%)",
+          // "&:hover": {
+          //   transform: "translateY(0%)",
 
-            "&::before": {
-              left: "150%",
-            },
-          },
+          //   "&::before": {
+          //     left: "150%",
+          //   },
+          // },
         }}
-      >
+    >
+        
         <Box
         sx={{
           pos: "absolute",
@@ -94,7 +92,6 @@ export default function Card({ title, icon, corner }) {
           top: ["50%",'6rem'],
           right: [null,null,null,'3rem'],
           opacity: "0.15",
-          mixBlendMode: "color-dodge",
         }}
         >
           {icon}
@@ -105,6 +102,7 @@ export default function Card({ title, icon, corner }) {
           justifyContent={["start", "start", "center"]}
           flexDir={"column"}
           w="full"
+          
         >
           <HStack>
           {icon}
@@ -113,7 +111,6 @@ export default function Card({ title, icon, corner }) {
             {title}
           </Heading>
         </Center>
-      </Center>
     </ChakraTilt>
   );
 }
