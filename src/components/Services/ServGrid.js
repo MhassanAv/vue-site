@@ -29,12 +29,12 @@ export default function ServGrid() {
               <>
                 <Icon
                   as={SiReact}
-                  boxSize={["2rem", "3rem", "5rem"]}
+                  boxSize={["2rem", "3rem", "4.5rem"]}
                   color="cyan"
                 />
                 <Icon
                   as={FaNodeJs}
-                  boxSize={["2rem", "3rem", "5rem"]}
+                  boxSize={["2rem", "3rem", "4.5rem"]}
                   display={["none", "none", "block"]}
                   color="green.500"
                 />
@@ -50,12 +50,12 @@ export default function ServGrid() {
               <>
                 <Icon
                   as={SiAdobeillustrator}
-                  boxSize={["2rem", "3rem", "5rem"]}
+                  boxSize={["2rem", "3rem", "4.5rem"]}
                   color="orange"
                 />{" "}
                 <Icon
                   as={SiAdobephotoshop}
-                  boxSize={["2rem", "3rem", "5rem"]}
+                  boxSize={["2rem", "3rem", "4.5rem"]}
                   display={["none", "none", "block"]}
                   color="cyan"
                 />
@@ -69,7 +69,7 @@ export default function ServGrid() {
             icon={
               <Icon
                 as={TbSeo}
-                boxSize={["2rem", "3rem", "5rem"]}
+                boxSize={["2rem", "3rem", "4.5rem"]}
                 color="sec"
               />
             }
@@ -82,7 +82,7 @@ export default function ServGrid() {
             icon={
               <Icon
                 as={MdOutlineScreenShare}
-                boxSize={["2rem", "3rem", "5rem"]}
+                boxSize={["2rem", "3rem", "4.5rem"]}
                 color="sec"
               />
             }
@@ -95,7 +95,7 @@ export default function ServGrid() {
             icon={
               <Icon
                 as={TbWriting}
-                boxSize={["2rem", "3rem", "5rem"]}
+                boxSize={["2rem", "3rem", "4.5rem"]}
                 color="sec"
               />
             }
@@ -107,7 +107,7 @@ export default function ServGrid() {
             icon={
               <Image
                 src='/icons/react-native.svg'
-                boxSize={["2rem", "3rem", "5rem"]}
+                boxSize={["2rem", "3rem", "4.5rem"]}
               />
             }
             corner={"rb"}
