@@ -49,12 +49,12 @@ export default function ServSwiper() {
               <>
                 <Icon
                   as={SiReact}
-                  boxSize={["2rem", "3rem", "4rem"]}
+                  boxSize={["3rem", "3rem", "4rem"]}
                   color="cyan"
                 />
                 <Icon
                   as={FaNodeJs}
-                  boxSize={["2rem", "3rem", "4rem"]}
+                  boxSize={["3rem", "3rem", "4rem"]}
                   color="green.500"
                 />
               </>
@@ -71,12 +71,12 @@ export default function ServSwiper() {
               <>
                 <Icon
                   as={SiAdobeillustrator}
-                  boxSize={["2rem", "3rem", "4rem"]}
+                  boxSize={["3rem", "3rem", "4rem"]}
                   color="orange"
                 />{" "}
                 <Icon
                   as={SiAdobephotoshop}
-                  boxSize={["2rem", "3rem", "4rem"]}
+                  boxSize={["3rem", "3rem", "4rem"]}
                   color="blue.500"
                 />
               </>
@@ -91,7 +91,7 @@ export default function ServSwiper() {
             icon={
               <Icon
                 as={TbSeo}
-                boxSize={["2rem", "3rem", "4rem"]}
+                boxSize={["3rem", "3rem", "4rem"]}
                 color="cyan"
               />
             }
@@ -106,7 +106,7 @@ export default function ServSwiper() {
             icon={
               <Icon
                 as={MdOutlineScreenShare}
-                boxSize={["2rem", "3rem", "4rem"]}
+                boxSize={["3rem", "3rem", "4rem"]}
                 color="sec"
               />
             }
@@ -121,7 +121,7 @@ export default function ServSwiper() {
             icon={
               <Icon
                 as={TbWriting}
-                boxSize={["2rem", "3rem", "4rem"]}
+                boxSize={["3rem", "3rem", "4rem"]}
                 color="sec"
               />
             }
@@ -135,7 +135,7 @@ export default function ServSwiper() {
             icon={
               <Image
                 src="/icons/react-native.svg"
-                boxSize={["2rem", "3rem", "4rem"]}
+                boxSize={["3rem", "3rem", "4rem"]}
               />
             }
             corner={"rb"}

@@ -1,4 +1,4 @@
-import { Center, Heading, Text, VStack, keyframes } from "@chakra-ui/react";
+import { Center, VStack, keyframes } from "@chakra-ui/react";
 import { useSwiper } from "swiper/react";
 import Btn from "../Btn";
 import AniLogo2 from "./AniLogo2";
@@ -33,18 +33,18 @@ export default function Hero() {
       bg='bg'
 
 
-        _after={{
-          content:"''",
-          pos:'absolute',
-          top:'-65%',
-          w:'300vw', 
-          h:'100%',
-          animation:`${gradient} 12s ease-in-out infinite`,
-          transform:'rotate(-38deg)',
-          bg:`linear-gradient(300deg, 
-            red,#473896,cyan, #a83593,#cb274a)`,
-          bgSize:'400% 400%'
-        }}
+        // _after={{
+        //   content:"''",
+        //   pos:'absolute',
+        //   top:'-65%',
+        //   w:'300vw', 
+        //   h:'100%',
+        //   animation:`${gradient} 12s ease-in-out infinite`,
+        //   transform:'rotate(-38deg)',
+        //   bg:`linear-gradient(300deg, 
+        //     red,#473896,cyan, #a83593,#cb274a)`,
+        //   bgSize:'400% 400%'
+        // }}
       
       
     >

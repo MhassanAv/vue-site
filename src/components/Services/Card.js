@@ -1,4 +1,4 @@
-import { Center, Heading, chakra,Box,HStack } from "@chakra-ui/react";
+import { Center, Heading, chakra,Box,HStack,useMediaQuery } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 
@@ -15,12 +15,13 @@ function Tilt(props) {
 
 export default function Card({ title, icon, corner }) {
   const ChakraTilt = chakra(Tilt);
+  const [isSmallScreen] = useMediaQuery('(max-width: 1000px)')
 
   const options = {
     scale: 1.03,
     speed: 200,
     max: 10,
-    glare: true,
+    glare: isSmallScreen?false:true,
     gyroscope: true,
     gyroscopeMinAngleX:     -45,    // This is the bottom limit of the device angle on X axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the left border of the element;
     gyroscopeMaxAngleX:     45,     
@@ -32,6 +33,7 @@ export default function Card({ title, icon, corner }) {
   const leftRadiusBot = ['1rem','1rem','1rem',corner === "lb" ? "3rem" : "0"]
   const RightRadiusTop = ['1rem','1rem','1rem',corner === "rt" ? "3rem" : "0"]
   const RightRadiusBot = ['1rem','1rem','1rem',corner === "rb" ? "3rem" : "0"]
+  
 
 
   return (
@@ -101,7 +103,7 @@ export default function Card({ title, icon, corner }) {
             {title}
           </Heading>
         </Center>
-        <Box
+        {/* <Box
         sx={{
           pos: "absolute",
           transform: "scale(5)",
@@ -113,7 +115,7 @@ export default function Card({ title, icon, corner }) {
         }}
         >
           {icon}
-        </Box>
+        </Box> */}
     </ChakraTilt>
   );
 }

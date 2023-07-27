@@ -1,11 +1,6 @@
 import {
-  Box,
-  Center,
   Heading,
-  SimpleGrid,
   VStack,
-  Icon,
-  Image,
   useMediaQuery,
 } from "@chakra-ui/react";
 import ServGrid from "./ServGrid";
@@ -15,7 +10,7 @@ export default function Services() {
 
   const [isSmallScreen] = useMediaQuery('(max-width: 1000px)')
 
-  console.log(isSmallScreen)
+
   return (
     <VStack
       h="100dvh"
@@ -24,9 +19,11 @@ export default function Services() {
       px={["1.5rem", "3rem", "5rem"]}
       py="1rem"
       justifyContent={"space-evenly"}
+      bgImage='main-bg.svg'
+      bgSize='cover'
     >
       <Heading>Services</Heading>
-      {!isSmallScreen?<ServGrid/>:<ServSwiper/>}
+      {!isSmallScreen?<ServGrid/>:<ServSwiper />}
     </VStack>
   );
 }

@@ -6,8 +6,6 @@ import {
   Center,
   VStack,
   Box,
-  Button,
-  useMediaQuery
 } from "@chakra-ui/react";
 import Btn from "../Btn";
 
