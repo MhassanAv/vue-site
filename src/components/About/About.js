@@ -31,7 +31,7 @@ export default function About() {
         <Heading
           fontSize={["3.5vh", "2rem", "2.5rem"]}
           textShadow={
-            "3px 3px #A53594,3px 3px #A53594,3px 3px #A53594,3px 3px #A53594,3px 3px #A53594,3px 3px #A53594,3px 3px #A53594"
+            "3px 3px #A53594"
           }
         >
           We are your one-stop shop for a complete online presence for your

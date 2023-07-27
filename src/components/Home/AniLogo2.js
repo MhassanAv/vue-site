@@ -96,7 +96,6 @@ export default function AniLogo2() {
           <stop offset="100%" stopColor="#cb274a" />
         </linearGradient>
       </defs>
-
       <motion.path
         variants={icon1}
         initial="hidden"

@@ -20,7 +20,7 @@ export default function Card({ title, icon, corner }) {
   const options = {
     scale: 1.03,
     speed: 200,
-    max: 10,
+    max: isSmallScreen?30:10,
     glare: isSmallScreen?false:true,
     gyroscope: true,
     gyroscopeMinAngleX:     -45,    // This is the bottom limit of the device angle on X axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the left border of the element;
@@ -99,7 +99,7 @@ export default function Card({ title, icon, corner }) {
           <HStack>
           {icon}
           </HStack>
-          <Heading fontSize={["1rem", "1.2rem", "1.5rem"]} textAlign={"center"}>
+          <Heading fontSize={["1rem", "1.2rem", "1.5rem"]} textAlign={"center"} >
             {title}
           </Heading>
         </Center>
