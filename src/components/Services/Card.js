@@ -54,7 +54,7 @@ export default function Card({ title, icon, corner }) {
         sx={{
           border: "1px solid rgba(255,255,255, 0.6)",
           backgroundColor: "rgba(255,255,255, 0.1)",
-          backdropFilter: "blur(5px)",
+          backdropFilter: "blur(10px)",
           transition: "transform 500ms ease-out",
 
           // "&::before": {
