@@ -46,7 +46,7 @@ export default function Card({ title, icon, corner }) {
       justifyContent={'center'}
       h={ ['50vh','50vh','50vh',"30vh"]}
         pos="relative"
-        zIndex={"2"}
+        zIndex={"3"}
         overflow={"hidden"}
         px="1rem"
         sx={{
@@ -84,24 +84,14 @@ export default function Card({ title, icon, corner }) {
         }}
     >
         
-        <Box
-        sx={{
-          pos: "absolute",
-          transform: "scale(5)",
-          overflow: "hidden",
-          top: ["50%",'6rem'],
-          right: [null,null,null,'3rem'],
-          opacity: "0.15",
-        }}
-        >
-          {icon}
-        </Box>
+        
         <Center
           gap="1rem"
           alignItems={"center"}
           justifyContent={["start", "start", "center"]}
           flexDir={"column"}
           w="full"
+          zIndex={'2'}
           
         >
           <HStack>
@@ -111,6 +101,19 @@ export default function Card({ title, icon, corner }) {
             {title}
           </Heading>
         </Center>
+        <Box
+        sx={{
+          pos: "absolute",
+          transform: "scale(5)",
+          overflow: "hidden",
+          top: ["50%",'6rem'],
+          right: [null,null,null,'3rem'],
+          zIndex:'1',
+          opacity: "0.15",
+        }}
+        >
+          {icon}
+        </Box>
     </ChakraTilt>
   );
 }
