@@ -103,7 +103,8 @@ export default function Card({ title, icon, corner }) {
             {title}
           </Heading>
         </Center>
-        {/* <Box
+        <Box
+        aria-hidden
         sx={{
           pos: "absolute",
           transform: "scale(5)",
@@ -115,7 +116,7 @@ export default function Card({ title, icon, corner }) {
         }}
         >
           {icon}
-        </Box> */}
+        </Box>
     </ChakraTilt>
   );
 }
