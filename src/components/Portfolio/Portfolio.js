@@ -1,4 +1,4 @@
-import { Center,Heading } from '@chakra-ui/react'
+import { Center,Heading,VStack } from '@chakra-ui/react'
 
 export default function Portfolio() {
   return (
@@ -6,6 +6,7 @@ export default function Portfolio() {
       h="100dvh"
       maxH="100dvh"
       w="full"
+      py='1rem'
       >
         <Heading>Portfolio</Heading>
       </Center>
