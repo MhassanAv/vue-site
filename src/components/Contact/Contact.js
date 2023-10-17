@@ -18,7 +18,7 @@ export default function Contact() {
         <Heading textShadow={
             "3px 3px #A53594"
           }>Contact</Heading>
-        <Center h='80vh' w='full' bg={'white'} rounded={'4rem'}p={'1rem'} >\
+        <Center h='80vh' w='full' bg={'white'} rounded={'4rem'}p={'0.5rem'} >\
         <VStack h='full' flex={'1.5'} bg='#011C2B' rounded={'4rem'} p='2rem'>
           <Heading fontSize={["3.5vh", "1.5rem", "1.5rem"]}>
           Contact Information

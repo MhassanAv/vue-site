@@ -1,24 +1,24 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
-import { Box, Icon, Image, chakra } from "@chakra-ui/react";
+import { Box, Icon, chakra } from "@chakra-ui/react";
 import Card from "./Card";
-import { SiAdobeillustrator, SiReact, SiAdobephotoshop } from "react-icons/si";
+import { FaCode } from "react-icons/fa";
 import { MdOutlineScreenShare } from "react-icons/md";
-import { TbSeo, TbWriting } from "react-icons/tb";
-import { FaNodeJs } from "react-icons/fa";
+import { TbSeo, TbWriting, TbDeviceMobile } from "react-icons/tb";
+import { BsVectorPen } from "react-icons/bs";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/autoplay"
+import "swiper/css/autoplay";
 
 export default function ServSwiper() {
   const ChakraSwiper = chakra(Swiper);
   return (
     <ChakraSwiper
-      modules={[Pagination,Autoplay]}
+      modules={[Pagination, Autoplay]}
       touchReleaseOnEdges={true}
       delay={1000}
       centeredSlides={true}
-      pagination={{clickable: true}}
+      pagination={{ clickable: true }}
       autoplay
       slidesPerView={1}
       freeMode={true}
@@ -34,28 +34,23 @@ export default function ServSwiper() {
           color: "white",
         },
         ".swiper-pagination-bullet-active": {
-          bg:'sec'
+          bg: "sec",
         },
-        ".swiper-pagination":{
-            bottom:'0rem'
-        }
+        ".swiper-pagination": {
+          bottom: "0rem",
+        },
       }}
     >
       <SwiperSlide>
-        <Box w="full" rounded={"0.5rem"} p='2rem'>
+        <Box w="full" rounded={"0.5rem"} p="2rem">
           <Card
             title={"Full Stack Web Development"}
             icon={
               <>
                 <Icon
-                  as={SiReact}
+                  as={FaCode}
                   boxSize={["3rem", "3rem", "4rem"]}
-                  color="cyan"
-                />
-                <Icon
-                  as={FaNodeJs}
-                  boxSize={["3rem", "3rem", "4rem"]}
-                  color="green.500"
+                  color="sec"
                 />
               </>
             }
@@ -64,20 +59,15 @@ export default function ServSwiper() {
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Box w="full" rounded={"1rem"} p='2rem'>
+        <Box w="full" rounded={"1rem"} p="2rem">
           <Card
             title={"Graphic Design"}
             icon={
               <>
                 <Icon
-                  as={SiAdobeillustrator}
+                  as={BsVectorPen}
                   boxSize={["3rem", "3rem", "4rem"]}
-                  color="orange"
-                />{" "}
-                <Icon
-                  as={SiAdobephotoshop}
-                  boxSize={["3rem", "3rem", "4rem"]}
-                  color="blue.500"
+                  color="sec"
                 />
               </>
             }
@@ -85,22 +75,18 @@ export default function ServSwiper() {
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Box w="full" rounded={"1rem"} p='2rem'>
+        <Box w="full" rounded={"1rem"} p="2rem">
           <Card
             title={"Digital Marketing & SEO"}
             icon={
-              <Icon
-                as={TbSeo}
-                boxSize={["3rem", "3rem", "4rem"]}
-                color="cyan"
-              />
+              <Icon as={TbSeo} boxSize={["3rem", "3rem", "4rem"]} color="sec" />
             }
             corner={"rt"}
           />
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Box w="full" rounded={"1rem"} p='2rem'>
+        <Box w="full" rounded={"1rem"} p="2rem">
           <Card
             title={"Branding"}
             icon={
@@ -115,7 +101,7 @@ export default function ServSwiper() {
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Box w="full" rounded={"1rem"} p='2rem'>
+        <Box w="full" rounded={"1rem"} p="2rem">
           <Card
             title={"Copywriting"}
             icon={
@@ -129,13 +115,14 @@ export default function ServSwiper() {
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Box w="full" rounded={"1rem"} p='2rem'> 
+        <Box w="full" rounded={"1rem"} p="2rem">
           <Card
             title={"Mobile Development"}
             icon={
-              <Image
-                src="/icons/react-native.svg"
-                boxSize={["3rem", "3rem", "4rem"]}
+              <Icon
+                as={TbDeviceMobile}
+                boxSize={["2rem", "3rem", "4.5rem"]}
+                color="sec"
               />
             }
             corner={"rb"}

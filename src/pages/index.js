@@ -44,9 +44,9 @@ export default function Home() {
         <SwiperSlide>
           <Services />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <Portfolio />
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <Contact />
         </SwiperSlide>
