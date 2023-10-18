@@ -16,7 +16,7 @@ export default function AniLogo2() {
     },
     visible: {
       pathLength: 1,
-      strokeWidth: 4,
+      strokeWidth: 2,
       stroke: "white",
       opacity: 1,
       fill: "rgba(255, 255, 255, 1)",
@@ -42,7 +42,7 @@ export default function AniLogo2() {
     },
     visible: {
       pathLength: 1,
-      strokeWidth: 4,
+      strokeWidth: 2,
       stroke: "white",
       opacity: 1,
       fill: "rgba(255, 255, 255, 1)",
@@ -67,7 +67,7 @@ export default function AniLogo2() {
     },
     visible: {
       pathLength: 1,
-      strokeWidth: 4,
+      strokeWidth: 2,
       stroke: "white",
       opacity: 1,
       fill: "rgba(255, 255, 255, 1)",

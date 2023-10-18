@@ -6,7 +6,7 @@ export default function Btn({children,onClick}) {
           rounded={"full"}
           variant={"unstyled"}
           transition={'background 0.3s ease'}
-          border={'4px solid transparent'}
+          border={'2px solid transparent'}
           h='3.5rem'
           w={['10.438rem','10.438rem','14.438rem']}
           fontSize={['1rem','1.2rem']}

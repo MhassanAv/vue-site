@@ -16,7 +16,7 @@ export default function Services() {
       // bgImage="main-bg.svg"
       bgSize="cover"
     >
-      <Heading textShadow={"3px 3px #A53594"}>Services</Heading>
+      <Heading >Services</Heading>
       {!isSmallScreen ? <ServGrid /> : <ServSwiper />}
     </VStack>
   );
