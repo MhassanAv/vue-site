@@ -92,7 +92,7 @@ export default function Contact() {
       justifyContent={"space-evenly"}
     >
       <Heading >Contact</Heading>
-      <Center h="80vh" w="full" bg={"white"} rounded={"4rem"} p={"0.7rem"}>
+      <Center h="80vh" w="full" bg={"white"} rounded={"3.7rem"} p={"1rem"}>
         <Flex
           w="full"
           h="full"
@@ -104,12 +104,11 @@ export default function Contact() {
           ]}
         >
           <VStack
-            h="full"
             transition={'all 0.3s ease'}
-            maxH={['20%','20%','full']}
-            flex={"2"}
+            maxH={['8rem','8rem','full']}
+            flex={"1.5"}
             bg="black"
-            rounded={"4rem"}
+            rounded={"3rem"}
             p={["1rem", "1rem", "1rem", "2rem", "2rem"]}
             py="1.5rem"
           >
@@ -154,7 +153,7 @@ export default function Contact() {
               gap={["0","0","0","0","1rem"]}
             >
               <FormControl isInvalid={errors.name}>
-                <FormLabel htmlFor="name" color="black" fontSize={'1rem'}>
+                <FormLabel htmlFor="name" color="black" fontSize={['0.8rem','1rem']}>
                   Full name
                 </FormLabel>
                 <Input
@@ -175,7 +174,7 @@ export default function Contact() {
                 </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={errors.phone}>
-                <FormLabel htmlFor="phone" color="black" fontSize={'1rem'}>
+                <FormLabel htmlFor="phone" color="black" fontSize={['0.8rem','1rem']}>
                   Phone Number
                 </FormLabel>
                 <Input
@@ -201,7 +200,7 @@ export default function Contact() {
                 </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={errors.email}>
-                <FormLabel htmlFor="email" color="black" fontSize={'1rem'}>
+                <FormLabel htmlFor="email" color="black" fontSize={['0.8rem','1rem']}>
                   Email
                 </FormLabel>
                 <Input
@@ -226,7 +225,7 @@ export default function Contact() {
                 </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={errors.msg}>
-                <FormLabel htmlFor="msg" color="black" fontSize={'1rem'}>
+                <FormLabel htmlFor="msg" color="black" fontSize={['0.8rem','1rem']}>
                   Message
                 </FormLabel>
                 <Input
