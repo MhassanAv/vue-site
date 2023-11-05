@@ -29,19 +29,19 @@ export default function About() {
         w="full"
       >
         <Heading
-          fontSize={["3.5vh", "2rem", "3.5rem"]}
+          fontSize={["4.5vh", "2rem", "3.5rem"]}
           sx={{textWrap:'balance'}}
         >
           We are your one-stop shop for a complete online presence for your
           company or startup.
         </Heading>
-        <Text fontSize={["1rem", "1.2rem"]}>
+        {/* <Text fontSize={["1rem", "1.2rem"]}>
           We provide a wide array of services including{" "}
           <Box fontWeight={'500'}>
             full-stack web development, graphic design, branding, SEO,
             copywriting, mobile development, and digital marketing.
           </Box>
-        </Text>
+        </Text> */}
         <Box alignSelf={["start"]} display={["none", "none", "none", "flex"]}>
           <Btn>Contact Us</Btn>
         </Box>

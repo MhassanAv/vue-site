@@ -16,6 +16,7 @@ export default function Nav() {
       px={["1.5rem", "3rem", "5rem"]}
       top='0'
       py='3rem'
+      as='nav'
     >
       <Box flex={['none','none','1']}>
       <Image src="logo.svg" alt="logo" w={['5rem','6rem',"7rem"]} m='0'  />

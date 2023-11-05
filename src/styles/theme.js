@@ -1,11 +1,11 @@
 import { extendTheme } from "@chakra-ui/react";
 import { Inter } from 'next/font/google'
 
-const font = Inter({ subsets: ['latin'],weight:['300','400','500'] })
+const headings = Inter({ subsets: ['latin'],weight:['700','800','900'] })
 
 const stylesTheme = {
   fonts:{
-    heading:`${font.style.fontFamily}`
+    heading:`${headings.style.fontFamily}`,
   },
   colors: {
     prim: "#653694",

@@ -9,10 +9,13 @@ import { Mousewheel,Scrollbar } from "swiper";
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import Services from "@/components/Services/Services";
+import { Poppins } from 'next/font/google'
+const bodies= Poppins({ subsets: ['latin'],weight:['400'] })
+
 
 export default function Home() {
   const ChakraSwiper = chakra(Swiper);
-
+  
   return (
     <>
       <Head>
@@ -21,7 +24,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <main>
       <ChakraSwiper
+        className={bodies.className}
         modules={[Mousewheel,Scrollbar]}
         touchReleaseOnEdges={true}
         scrollbar
@@ -51,6 +56,7 @@ export default function Home() {
           <Contact />
         </SwiperSlide>
       </ChakraSwiper>
+     </main>
     </>
   );
 }
