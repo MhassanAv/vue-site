@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/react"
 
-export default function Btn({children,onClick}) {
+export default function Btn({children,onClick,form}) {
   return (
     <Button
           rounded={"full"}
@@ -12,8 +12,9 @@ export default function Btn({children,onClick}) {
           fontSize={['1rem','1.2rem']}
           fontWeight={'500'}
           onClick={onClick}
+          color={form?'bg':null}
           sx={{
-            background:'linear-gradient(#181818, #181818) padding-box,linear-gradient(to left, #743ad5, #d53a9d) border-box', 
+            background:`linear-gradient(${form?'#FFFFFF, #FFFFFF':'#181818, #181818'}) padding-box,linear-gradient(to left, #743ad5, #d53a9d) border-box`
         }}
           _hover={{
             border:'none', 

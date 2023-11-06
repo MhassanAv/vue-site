@@ -13,6 +13,7 @@ import {
 import { MdPhone, MdMail } from "react-icons/md";
 import { SiLinkedin, SiFacebook, SiBehance, SiWhatsapp } from "react-icons/si";
 import { useForm } from "react-hook-form";
+import Btn from "../Btn";
 
 
 
@@ -56,31 +57,31 @@ export default function Contact() {
     });
   }
 
-  const FormBtn = ({ children }) => {
-    return (
-      <Button
-        rounded={"full"}
-        variant={"unstyled"}
-        transition={"all 0.3s ease"}
-        display="flex"
-        h="3.5rem"
-        w={["10.438rem", "10.438rem", "14.438rem"]}
-        fontSize={["1rem", "1.2rem"]}
-        fontWeight={"500"}
-        type="submit"
-        isLoading={isSubmitting}
-        bg="prim"
-        alignItems={"center"}
-        justifyContent={"center"}
-        mt='1rem'
-        _hover={{
-          transform: "scale(1.05)",
-        }}
-      >
-        {children}
-      </Button>
-    );
-  };
+  // const FormBtn = ({ children }) => {
+  //   return (
+  //     <Button
+  //       rounded={"full"}
+  //       variant={"unstyled"}
+  //       transition={"all 0.3s ease"}
+  //       display="flex"
+  //       h="3.5rem"
+  //       w={["10.438rem", "10.438rem", "14.438rem"]}
+  //       fontSize={["1rem", "1.2rem"]}
+  //       fontWeight={"500"}
+  //       type="submit"
+  //       isLoading={isSubmitting}
+  //       bg="prim"
+  //       alignItems={"center"}
+  //       justifyContent={"center"}
+  //       mt='1rem'
+  //       _hover={{
+  //         transform: "scale(1.05)",
+  //       }}
+  //     >
+  //       {children}
+  //     </Button>
+  //   );
+  // };
 
   return (
     <VStack
@@ -109,7 +110,7 @@ export default function Contact() {
             flex={"1.5"}
             bg="black"
             rounded={"3rem"}
-            p={["1rem", "1rem", "1rem", "2rem", "2rem"]}
+            p={["1rem", "1rem", "2rem", "3rem", "3rem"]}
             py="1.5rem"
           >
             <Heading
@@ -150,7 +151,9 @@ export default function Contact() {
               p="1rem"
               alignItems={"center"}
               justifyContent={"center"}
-              gap={["0","0","0","0","1rem"]}
+              
+              spacing={["0.5rem","0.5rem","1rem","1rem","2rem"]}
+              
             >
               <FormControl isInvalid={errors.name}>
                 <FormLabel htmlFor="name" color="black" fontSize={['0.8rem','1rem']}>
@@ -161,6 +164,7 @@ export default function Contact() {
                   id="name"
                   variant={"flushed"}
                   type="text"
+                  borderBottom='2px solid gray'
                   {...register("name", {
                     required: "This is required",
                     minLength: {
@@ -182,6 +186,7 @@ export default function Contact() {
                   color="gray.900"
                   variant={"flushed"}
                   type="number"
+                  borderBottom='2px solid gray'
                   {...register("phone", {
                     required: "This is required",
                     minLength: {
@@ -208,6 +213,7 @@ export default function Contact() {
                   id="email"
                   variant={"flushed"}
                   type="email"
+                  borderBottom='2px solid gray'
                   {...register("email", {
                     required: "This is required",
                     minLength: {
@@ -233,6 +239,7 @@ export default function Contact() {
                   variant={"flushed"}
                   id="msg"
                   type="text"
+                  borderBottom='2px solid gray'
                   {...register("msg", {
                     required: "This is required",
                     minLength: {
@@ -245,7 +252,7 @@ export default function Contact() {
                   {errors.msg && errors.msg.message}
                 </FormErrorMessage>
               </FormControl>
-              <FormBtn>Submit</FormBtn>
+              <Btn form={true}>Submit</Btn>
             </VStack>
           </VStack>
         </Flex>

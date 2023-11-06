@@ -2,6 +2,7 @@ import Head from "next/head";
 import Hero from "@/components/Home/Hero";
 import About from "@/components/About/About";
 import Portfolio from "@/components/Portfolio/Portfolio";
+import GridText from "@/components/Home/GridText";
 import Contact from "@/components/Contact/Contact";
 import { chakra } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -42,6 +43,9 @@ export default function Home() {
       >
         <SwiperSlide>
           <Hero />
+        </SwiperSlide>
+        <SwiperSlide>
+          <GridText />
         </SwiperSlide>
         <SwiperSlide>
           <About />
