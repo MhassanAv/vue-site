@@ -252,7 +252,7 @@ export default function Contact() {
                   {errors.msg && errors.msg.message}
                 </FormErrorMessage>
               </FormControl>
-              <Btn form={true}>Submit</Btn>
+              <Btn form={true} isLoading={isSubmitting}>Submit</Btn>
             </VStack>
           </VStack>
         </Flex>
