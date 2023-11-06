@@ -15,6 +15,9 @@ export default function Btn({children,onClick,form,isLoading}) {
           color={form?'bg':null}
           type={form?'submit':'button'}
           isLoading={form&&isLoading}
+          display={'flex'}
+          alignItems={'center'}
+          justifyContent={'center'}
           sx={{
             background:`linear-gradient(${form?'#FFFFFF, #FFFFFF':'#181818, #181818'}) padding-box,linear-gradient(to left, #743ad5, #d53a9d) border-box`
         }}
