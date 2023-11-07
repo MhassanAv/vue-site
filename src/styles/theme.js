@@ -20,7 +20,6 @@ const stylesTheme = {
       "html, body": {
         postion: "relative",
         fontSize: "16px",
-        overflow: "hidden",
         bg:"bg",
         bgImage:'main-bg.svg',
       bgSize:'contain',

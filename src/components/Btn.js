@@ -19,11 +19,13 @@ export default function Btn({children,onClick,form,isLoading}) {
           alignItems={'center'}
           justifyContent={'center'}
           sx={{
+            transition:'background 0.3s ease',
             background:`linear-gradient(${form?'#FFFFFF, #FFFFFF':'#181818, #181818'}) padding-box,linear-gradient(to left, #743ad5, #d53a9d) border-box`
         }}
           _hover={{
             border:'none', 
-            bgGradient:'linear-gradient(to-l, #743ad5, #d53a9d)',
+            transition:'background 0.3s ease',
+            bg:'linear-gradient(270deg,#743ad5, #d53a9d)'
           }}
         >
           {children}
