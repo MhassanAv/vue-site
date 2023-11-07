@@ -21,7 +21,7 @@ const stylesTheme = {
         postion: "relative",
         fontSize: "16px",
         bg:"bg",
-        bgImage:'main-bg.svg',
+        // bgImage:'main-bg.svg',
       bgSize:'contain',
       bgRepeat:'no-repeat',
       bgPos:'right',
