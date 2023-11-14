@@ -93,7 +93,7 @@ export default function Contact() {
       justifyContent={"space-evenly"}
     >
       <Heading >Contact</Heading>
-      <Center h="80vh" w="full" bg={"white"} rounded={"3.7rem"} p={"1rem"}>
+      <Center h="85vh" w="full" bg={"white"} rounded={"3.7rem"} p={"1rem"}>
         <Flex
           w="full"
           h="full"

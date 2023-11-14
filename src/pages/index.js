@@ -17,8 +17,6 @@ const bodies = Poppins({ subsets: ["latin"], weight: ["400"] });
 export default function Home() {
   const ChakraSwiper = chakra(Swiper);
 
-
-
   return (
     <>
       <Head>
@@ -27,17 +25,21 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <chakra.main sx={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        overflow: 'hidden',
-        pointerEvents: 'none',
-      }}>
+      <chakra.main
+        sx={{
+          "parent": {
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            overflow: "hidden",
+            pointerEvents: "none",
+          },
+        }}
+      >
         <SmoothScroll>
-        {/* <ChakraSwiper
+          {/* <ChakraSwiper
         className={bodies.className}
         modules={[Mousewheel,Scrollbar]}
         touchReleaseOnEdges={true}
@@ -71,13 +73,13 @@ export default function Home() {
           <Contact />
         </SwiperSlide>
       </ChakraSwiper> */}
-      <VStack spacing={'0'} className={bodies.className}>
-        <Hero />
-        <GridText />
-        <About />
-        <Services />
-        <Contact />
-        </VStack>
+          <VStack spacing={"0"} className={bodies.className}>
+            <Hero />
+            <GridText />
+            <About />
+            <Services />
+            <Contact />
+          </VStack>
         </SmoothScroll>
       </chakra.main>
     </>
