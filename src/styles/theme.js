@@ -1,11 +1,12 @@
 import { extendTheme } from "@chakra-ui/react";
-import { Inter } from 'next/font/google'
-
-const headings = Inter({ subsets: ['latin'],weight:['700','800','900'] })
+import { Poppins } from 'next/font/google'
+const font = Poppins({ subsets: ["latin"], weight: ["400",'500'] });
 
 const stylesTheme = {
   fonts:{
-    heading:`${headings.style.fontFamily}`,
+    heading:`${font.style.fontFamily}`,
+    text:`${font.style.fontFamily}`,
+    button:`${font.style.fontFamily}`,
   },
   colors: {
     prim: "#653694",
@@ -21,6 +22,7 @@ const stylesTheme = {
         postion: "relative",
         fontSize: "16px",
         bg:"bg",
+        fontFamily:`${font.style.fontFamily}`,
         // bgImage:'main-bg.svg',
       bgSize:'contain',
       bgRepeat:'no-repeat',
@@ -28,6 +30,15 @@ const stylesTheme = {
         color:'text',
         padding: "0",
         margin: "0",
+      },
+      ".parent": {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        overflow: "hidden",
+        pointerEvents: "none",
       },
       "p":{
         color:'text',
