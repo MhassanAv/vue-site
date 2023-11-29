@@ -4,15 +4,60 @@ import About from "@/components/About/About";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import GridText from "@/components/Home/GridText";
 import Contact from "@/components/Contact/Contact";
-import { VStack, chakra } from "@chakra-ui/react";
+import { VStack, chakra, Center, Heading, Box } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Scrollbar } from "swiper";
+import Countdown from "react-countdown";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import Services from "@/components/Services/Services";
 
 export default function Home() {
   const ChakraSwiper = chakra(Swiper);
+  const dev = true;
+
+  const Dates = ({ type }) => 
+    <Box
+      as={Center}
+      p={["1.5rem", "1.5rem", "2rem"]}
+      sx={{
+        background: "rgba(255, 255, 255, 0.22)",
+        borderRadius: "16px",
+        boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+        backdropFilter: "blur(5.4px)",
+        WebkitBackdropFilter: "blur(5.4px)",
+      }}
+    >
+      {type}
+    </Box>;
+
+  const Completionist = () => (
+    <Heading as="h1" fontSize={"clamp(2.2rem,4.167vw,5rem)"}>
+      Almost there
+    </Heading>
+  );
+
+  const renderer = ({ days, hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render a completed state
+      return <Completionist />;
+    } else {
+      // Render a countdown
+      return (
+        <Heading
+          as="h2"
+          fontSize={"clamp(1.5rem,4.167vw,5rem)"}
+          display={"flex"}
+          gap="1rem"
+        >
+          <Dates type={days} />
+          <Dates type={hours} />
+          <Dates type={minutes} />
+          <Dates type={seconds} />
+        </Heading>
+      );
+    }
+  };
 
   return (
     <>
@@ -22,7 +67,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-          {/* <ChakraSwiper
+      {/* <ChakraSwiper
         className={bodies.className}
         modules={[Mousewheel,Scrollbar]}
         touchReleaseOnEdges={true}
@@ -56,11 +101,36 @@ export default function Home() {
           <Contact />
         </SwiperSlide>
       </ChakraSwiper> */}
-            <Hero />
-            <GridText />
-            <About />
-            <Services />
-            <Contact />
+      {dev ? (
+        <Center pos="relative" w="full" h="100vh" px="1rem">
+          <chakra.video
+            opacity={"0.5"}
+            autoPlay
+            muted
+            loop
+            w="full"
+            h="full"
+            pos={"fixed"}
+            objectFit={"cover"}
+          >
+            <source src="vueunderbg.webm" type="video/webm" />
+          </chakra.video>
+          <VStack position={"absolute"} spacing={"2rem"}>
+            <Heading as="h1" fontSize={"clamp(1.7rem,4.167vw,5rem)"} whiteSpace={'nowrap'}> 
+              Site Under Construction
+            </Heading>
+            {/* <Countdown renderer={renderer} date={Date.now() + 500000} /> */}
+          </VStack>
+        </Center>
+      ) : (
+        <>
+          <Hero />
+          <GridText />
+          <About />
+          <Services />
+          <Contact />
+        </>
+      )}
     </>
   );
 }
