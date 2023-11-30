@@ -119,7 +119,7 @@ export default function Home() {
         <Center pos="relative" w="full" h="100svh" maxH="100svh">
           <chakra.video
             opacity={"0.5"}
-            autoPlay="autoplay"
+            autoPlay
             muted
             loop
             width="100%"
@@ -129,6 +129,7 @@ export default function Home() {
             className="video-container"
             preload="auto"
             ref={vid1}
+            position={'fixed'}
           >
             <source src="vueunderbg.webm" type="video/webm" />
           </chakra.video>
@@ -149,7 +150,7 @@ export default function Home() {
           </VStack>
           <chakra.video
             opacity={"0.5"}
-            autoPlay="autoplay"
+            autoPlay
             muted
             loop
             width="100%"
@@ -161,6 +162,7 @@ export default function Home() {
             className="video-container"
             preload="auto"
             ref={vid2}
+            position={'fixed'}
           >
             <source src="vueunderbg.webm" type="video/webm" />
           </chakra.video>
@@ -181,7 +183,7 @@ export default function Home() {
           </VStack>
           <chakra.video
             opacity={"0.5"}
-            autoPlay="autoplay"
+            autoPlay
             muted
             loop
             width="100%"
@@ -193,6 +195,7 @@ export default function Home() {
             className="video-container"
             preload="auto"
             ref={vid3}
+            position={'fixed'}
             
           >
             <source src="vueunderbg.webm" type="video/webm" />
