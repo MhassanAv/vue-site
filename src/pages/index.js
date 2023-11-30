@@ -102,27 +102,62 @@ export default function Home() {
         </SwiperSlide>
       </ChakraSwiper> */}
       {dev ? (
-        <Center pos="relative" w="full" h="100vh" px="1rem">
+        <Center pos="relative" w="full" h="100svh" maxH='100svh' >
           <chakra.video
             opacity={"0.5"}
             autoPlay
             muted
             loop
-            w="full"
-            h="full"
-            pos={"fixed"}
+            width="100%"
+            height="100%"
             objectFit={"cover"}
             playsInline
-            controls={false}
+            
           >
             <source src="vueunderbg.webm" type="video/webm" />
           </chakra.video>
-          <VStack position={"absolute"} spacing={"2rem"}>
-            <Heading as="h1" p='1rem' fontSize={"clamp(1.7rem,4.167vw,5rem)"} textAlign={'center'}> 
+          <VStack position={"absolute"} blendMode={'overlay'} spacing={"2rem"} px='1rem'>
+            <Heading as="h1" fontSize={"clamp(2rem,5.833vw,7rem)"} textAlign={'center'} > 
               Site Under Construction
             </Heading>
             {/* <Countdown renderer={renderer} date={Date.now() + 500000} /> */}
           </VStack>
+          <chakra.video
+          opacity={"0.5"}
+            autoPlay
+            muted
+            loop
+            width="100%"
+            height="100%"
+            objectFit={"cover"}
+            playsInline
+            pos='absolute'
+            blendMode={'darken'}
+            
+          >
+            <source src="vueunderbg.webm" type="video/webm" />
+          </chakra.video>
+          <VStack position={"absolute"}  blendMode={'hard-light'} spacing={"2rem"} px='1rem'>
+            <Heading as="h1" fontSize={"clamp(2rem,5.833vw,7rem)"} textAlign={'center'} > 
+              Site Under Construction
+            </Heading>
+            {/* <Countdown renderer={renderer} date={Date.now() + 500000} /> */}
+          </VStack>
+          <chakra.video
+          opacity={"0.5"}
+            autoPlay
+            muted
+            loop
+            width="100%"
+            height="100%"
+            objectFit={"cover"}
+            playsInline
+            pos='absolute'
+            blendMode={'hard-light'}
+            
+          >
+            <source src="vueunderbg.webm" type="video/webm" />
+          </chakra.video>
         </Center>
       ) : (
         <>
