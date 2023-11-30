@@ -112,11 +112,13 @@ export default function Home() {
             h="full"
             pos={"fixed"}
             objectFit={"cover"}
+            playsInline
+            controls={false}
           >
             <source src="vueunderbg.webm" type="video/webm" />
           </chakra.video>
           <VStack position={"absolute"} spacing={"2rem"}>
-            <Heading as="h1" fontSize={"clamp(1.7rem,4.167vw,5rem)"} whiteSpace={'nowrap'}> 
+            <Heading as="h1" p='1rem' fontSize={"clamp(1.7rem,4.167vw,5rem)"} textAlign={'center'}> 
               Site Under Construction
             </Heading>
             {/* <Countdown renderer={renderer} date={Date.now() + 500000} /> */}
