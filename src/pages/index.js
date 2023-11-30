@@ -123,6 +123,7 @@ export default function Home() {
             playsInline
             className="video-container"
             preload="auto"
+            controls
           >
             <source src="vueunderbg.webm" type="video/webm" />
           </chakra.video>
@@ -154,6 +155,7 @@ export default function Home() {
             blendMode={"darken"}
             className="video-container"
             preload="auto"
+            controls
           >
             <source src="vueunderbg.webm" type="video/webm" />
           </chakra.video>
@@ -185,6 +187,7 @@ export default function Home() {
             blendMode={"hard-light"}
             className="video-container"
             preload="auto"
+            controls
             
           >
             <source src="vueunderbg.webm" type="video/webm" />
