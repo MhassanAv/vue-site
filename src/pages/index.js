@@ -11,10 +11,18 @@ import Countdown from "react-countdown";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import Services from "@/components/Services/Services";
+import { useEffect } from "react";
 
 export default function Home() {
   const ChakraSwiper = chakra(Swiper);
   const dev = true;
+
+  useEffect(()=>{
+    [...document.querySelectorAll('video')].forEach((i)=>{
+      i.muted=true
+      i.play()
+    })
+  },[])
 
   const Dates = ({ type }) => (
     <Box
