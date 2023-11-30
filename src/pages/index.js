@@ -11,17 +11,22 @@ import Countdown from "react-countdown";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import Services from "@/components/Services/Services";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
   const ChakraSwiper = chakra(Swiper);
   const dev = true;
+  const vid1= useRef(null)
+  const vid2= useRef(null)
+  const vid3= useRef(null)
 
   useEffect(()=>{
-    [...document.querySelectorAll('video')].forEach((i)=>{
-      i.muted=true
-      i.play()
-    })
+    vid1.current.muted=true
+    vid1.current.play();
+    vid2.current.muted=true
+    vid2.current.play();
+    vid3.current.muted=true
+    vid3.current.play();
   },[])
 
   const Dates = ({ type }) => (
@@ -123,7 +128,7 @@ export default function Home() {
             playsInline
             className="video-container"
             preload="auto"
-            controls
+            ref={vid1}
           >
             <source src="vueunderbg.webm" type="video/webm" />
           </chakra.video>
@@ -155,7 +160,7 @@ export default function Home() {
             blendMode={"darken"}
             className="video-container"
             preload="auto"
-            controls
+            ref={vid2}
           >
             <source src="vueunderbg.webm" type="video/webm" />
           </chakra.video>
@@ -187,7 +192,7 @@ export default function Home() {
             blendMode={"hard-light"}
             className="video-container"
             preload="auto"
-            controls
+            ref={vid3}
             
           >
             <source src="vueunderbg.webm" type="video/webm" />
