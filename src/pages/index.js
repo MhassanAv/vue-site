@@ -116,7 +116,7 @@ export default function Home() {
             playsInline
             className="video-container"
             preload="auto"
-            ref={vid1}
+    
             position={"fixed"}
             src="/vueunderbg.webm"
           >
@@ -158,7 +158,6 @@ export default function Home() {
             blendMode={"darken"}
             className="video-container"
             preload="auto"
-            ref={vid2}
             position={"fixed"}
             src="/vueunderbg.webm"
           >
@@ -200,7 +199,6 @@ export default function Home() {
             blendMode={"hard-light"}
             className="video-container"
             preload="auto"
-            ref={vid3}
             position={"fixed"}
             src="/vueunderbg.webm"
           >
