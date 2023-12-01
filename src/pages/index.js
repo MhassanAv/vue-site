@@ -144,7 +144,7 @@ export default function Home() {
           >
             <source src="/vueunderbg.webm" type="video/webm" />
           </chakra.video>
-          <canvas class="canvas"></canvas> 
+          <canvas className="canvas"></canvas> 
           <VStack
             position={"absolute"}
             blendMode={"overlay"}
