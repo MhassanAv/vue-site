@@ -16,18 +16,28 @@ import { useEffect, useRef } from "react";
 export default function Home() {
   const ChakraSwiper = chakra(Swiper);
   const dev = true;
-  const vid1= useRef(null)
-  const vid2= useRef(null)
-  const vid3= useRef(null)
+  const vid1 = useRef(null);
+  const vid2 = useRef(null);
+  const vid3 = useRef(null);
 
-  useEffect(()=>{
-    vid1.current.muted=true
-    vid1.current.play();
-    vid2.current.muted=true
-    vid2.current.play();
-    vid3.current.muted=true
-    vid3.current.play();
-  },[])
+  useEffect(() => {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+
+    if (isIOS) {
+      let canvasVideo = new CanvasVideoPlayer({
+        videoSelector: ".video",
+        canvasSelector: ".canvas",
+        timelineSelector: false,
+        autoplay: true,
+        makeLoop: true,
+        pauseOnClick: false,
+        audio: false,
+      });
+    } else {
+      // Use HTML5 video
+      document.querySelectorAll(".canvas")[0].style.display = "none";
+    }
+  }, []);
 
   const Dates = ({ type }) => (
     <Box
@@ -129,11 +139,12 @@ export default function Home() {
             className="video-container"
             preload="auto"
             ref={vid1}
-            position={'fixed'}
+            position={"fixed"}
             src="/vueunderbg.webm"
           >
             <source src="/vueunderbg.webm" type="video/webm" />
           </chakra.video>
+          <canvas class="canvas"></canvas> 
           <VStack
             position={"absolute"}
             blendMode={"overlay"}
@@ -151,7 +162,7 @@ export default function Home() {
               as="h2"
               fontSize={"clamp(1rem,1.25vw,1.2rem)"}
               textAlign={"center"}
-              fontWeight='light'
+              fontWeight="light"
             >
               We're working on bringing the site live, check back soon!
             </Heading>
@@ -171,7 +182,7 @@ export default function Home() {
             className="video-container"
             preload="auto"
             ref={vid2}
-            position={'fixed'}
+            position={"fixed"}
             src="/vueunderbg.webm"
           >
             <source src="/vueunderbg.webm" type="video/webm" />
@@ -193,7 +204,7 @@ export default function Home() {
               as="h2"
               fontSize={"clamp(1rem,1.25vw,1.2rem)"}
               textAlign={"center"}
-              fontWeight='light'
+              fontWeight="light"
             >
               We're working on bringing the site live, check back soon!
             </Heading>
@@ -213,9 +224,8 @@ export default function Home() {
             className="video-container"
             preload="auto"
             ref={vid3}
-            position={'fixed'}
+            position={"fixed"}
             src="/vueunderbg.webm"
-            
           >
             <source src="/vueunderbg.webm" type="video/webm" />
           </chakra.video>
