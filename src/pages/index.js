@@ -11,33 +11,11 @@ import Countdown from "react-countdown";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import Services from "@/components/Services/Services";
-import { useEffect, useRef } from "react";
 
 export default function Home() {
   const ChakraSwiper = chakra(Swiper);
   const dev = true;
-  const vid1 = useRef(null);
-  const vid2 = useRef(null);
-  const vid3 = useRef(null);
 
-  useEffect(() => {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
-
-    if (isIOS) {
-      let canvasVideo = new CanvasVideoPlayer({
-        videoSelector: ".video",
-        canvasSelector: ".canvas",
-        timelineSelector: false,
-        autoplay: true,
-        makeLoop: true,
-        pauseOnClick: false,
-        audio: false,
-      });
-    } else {
-      // Use HTML5 video
-      document.querySelectorAll(".canvas")[0].style.display = "none";
-    }
-  }, []);
 
   const Dates = ({ type }) => (
     <Box
@@ -144,7 +122,6 @@ export default function Home() {
           >
             <source src="/vueunderbg.webm" type="video/webm" />
           </chakra.video>
-          <canvas className="canvas"></canvas> 
           <VStack
             position={"absolute"}
             blendMode={"overlay"}
