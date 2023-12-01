@@ -130,8 +130,9 @@ export default function Home() {
             preload="auto"
             ref={vid1}
             position={'fixed'}
+            src="/vueunderbg.webm"
           >
-            <source src="vueunderbg.webm" type="video/webm" />
+            <source src="/vueunderbg.webm" type="video/webm" />
           </chakra.video>
           <VStack
             position={"absolute"}
@@ -145,6 +146,14 @@ export default function Home() {
               textAlign={"center"}
             >
               Site Under Construction
+            </Heading>
+            <Heading
+              as="h2"
+              fontSize={"clamp(1rem,1.25vw,1.2rem)"}
+              textAlign={"center"}
+              fontWeight='light'
+            >
+              We're working on bringing the site live, check back soon!
             </Heading>
             {/* <Countdown renderer={renderer} date={Date.now() + 500000} /> */}
           </VStack>
@@ -163,8 +172,9 @@ export default function Home() {
             preload="auto"
             ref={vid2}
             position={'fixed'}
+            src="/vueunderbg.webm"
           >
-            <source src="vueunderbg.webm" type="video/webm" />
+            <source src="/vueunderbg.webm" type="video/webm" />
           </chakra.video>
           <VStack
             position={"absolute"}
@@ -178,6 +188,14 @@ export default function Home() {
               textAlign={"center"}
             >
               Site Under Construction
+            </Heading>
+            <Heading
+              as="h2"
+              fontSize={"clamp(1rem,1.25vw,1.2rem)"}
+              textAlign={"center"}
+              fontWeight='light'
+            >
+              We're working on bringing the site live, check back soon!
             </Heading>
             {/* <Countdown renderer={renderer} date={Date.now() + 500000} /> */}
           </VStack>
@@ -196,9 +214,10 @@ export default function Home() {
             preload="auto"
             ref={vid3}
             position={'fixed'}
+            src="/vueunderbg.webm"
             
           >
-            <source src="vueunderbg.webm" type="video/webm" />
+            <source src="/vueunderbg.webm" type="video/webm" />
           </chakra.video>
         </Center>
       ) : (
