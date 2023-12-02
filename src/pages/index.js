@@ -104,7 +104,7 @@ export default function Home() {
         </SwiperSlide>
       </ChakraSwiper> */}
       {dev ? (
-        <Center pos="relative" w="full" h="100svh" maxH="100svh">
+        <Center pos="relative" w="full" h="100svh" maxH="100svh" >
           <chakra.video
             opacity={"0.5"}
             autoPlay
@@ -118,9 +118,9 @@ export default function Home() {
             preload="auto"
     
             position={"fixed"}
-            src="/vueunderbg.webm"
+            src="/vueunderbg.mp4"
           >
-            <source src="/vueunderbg.webm" type="video/webm" />
+            <source src="/vueunderbg.mp4" type="video/mp4" />
           </chakra.video>
           <VStack
             position={"absolute"}
@@ -159,9 +159,9 @@ export default function Home() {
             className="video-container"
             preload="auto"
             position={"fixed"}
-            src="/vueunderbg.webm"
+            src="/vueunderbg.mp4"
           >
-            <source src="/vueunderbg.webm" type="video/webm" />
+            <source src="/vueunderbg.mp4" type="video/mp4" />
           </chakra.video>
           <VStack
             position={"absolute"}
@@ -200,9 +200,9 @@ export default function Home() {
             className="video-container"
             preload="auto"
             position={"fixed"}
-            src="/vueunderbg.webm"
+            src="/vueunderbg.mp4"
           >
-            <source src="/vueunderbg.webm" type="video/webm" />
+            <source src="/vueunderbg.mp4" type="video/mp4" />
           </chakra.video>
         </Center>
       ) : (

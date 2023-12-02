@@ -1,6 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 import { Poppins } from 'next/font/google'
-const font = Poppins({ subsets: ["latin"], weight: ["400",'500'] });
+const font = Poppins({ subsets: ["latin"], weight: ["500"] });
 
 const stylesTheme = {
   fonts:{
