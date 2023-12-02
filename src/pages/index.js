@@ -104,7 +104,7 @@ export default function Home() {
         </SwiperSlide>
       </ChakraSwiper> */}
       {dev ? (
-        <Center pos="relative" w="full" h="100svh" maxH="100svh" >
+        <Center pos="relative" w="full" h="100svh" maxH="100svh" userSelect={'none'} >
           <chakra.video
             opacity={"0.5"}
             autoPlay
@@ -116,7 +116,6 @@ export default function Home() {
             playsInline
             className="video-container"
             preload="auto"
-    
             position={"fixed"}
             src="/vueunderbg.mp4"
           >
@@ -130,8 +129,9 @@ export default function Home() {
           >
             <Heading
               as="h1"
-              fontSize={"clamp(2rem,5.833vw,7rem)"}
+              fontSize={"clamp(2.5rem,5.833vw,7rem)"}
               textAlign={"center"}
+              fontWeight={'600'}
             >
               Site Under Construction
             </Heading>
@@ -139,7 +139,7 @@ export default function Home() {
               as="h2"
               fontSize={"clamp(1rem,1.25vw,1.2rem)"}
               textAlign={"center"}
-              fontWeight="light"
+              fontWeight={'300'}
             >
               We're working on bringing the site live, check back soon!
             </Heading>
@@ -171,8 +171,9 @@ export default function Home() {
           >
             <Heading
               as="h1"
-              fontSize={"clamp(2rem,5.833vw,7rem)"}
+              fontSize={"clamp(2.5rem,5.833vw,7rem)"}
               textAlign={"center"}
+              fontWeight={'600'}
             >
               Site Under Construction
             </Heading>
@@ -180,7 +181,7 @@ export default function Home() {
               as="h2"
               fontSize={"clamp(1rem,1.25vw,1.2rem)"}
               textAlign={"center"}
-              fontWeight="light"
+              fontWeight={'300'}
             >
               We're working on bringing the site live, check back soon!
             </Heading>
